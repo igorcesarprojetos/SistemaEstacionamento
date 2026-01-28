@@ -1,0 +1,517 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\estacionamento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\estacionamento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\controllers\\estacionamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\controllers\\estacionamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\estacionamento\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\estacionamento\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\estacionamento\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\estacionamento\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\estacionamento\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\estacionamento\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\models\\estacionamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\models\\estacionamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\data\\sistemaestacionamentocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\data\\sistemaestacionamentocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\migrations\\20260127143524_atualizacao1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\migrations\\20260127143524_atualizacao1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\igor\\AppData\\Local\\Temp\\MetadataAsSource\\7c170d57066f4b8c8660a35ee023c26d\\DecompilationMetadataAsSourceFileProvider\\29cdb12097a9498cb6fb4d509d0d39bb\\RazorPage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\estacionamento\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\estacionamento\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\migrations\\sistemaestacionamentocontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\migrations\\sistemaestacionamentocontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\migrations\\20260127120552_initialmigrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\migrations\\20260127120552_initialmigrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\sistemaestacionamento.main.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\sistemaestacionamento.main.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|c:\\users\\igor\\documents\\projetos igor\\sistemaestacionamento\\sistemaestacionamento.main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD05F968-88DD-6266-A6EC-E0A5C90E4A97}|SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj|solutionrelative:sistemaestacionamento.main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 23,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "serviceDependencies.json",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Properties\\serviceDependencies.json",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Properties\\serviceDependencies.json",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Properties\\serviceDependencies.json",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Properties\\serviceDependencies.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-28T22:53:15.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Properties\\launchSettings.json",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-28T22:53:12.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T15:08:44.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T12:46:11.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBIAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T11:59:02.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T12:46:58.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Estacionamento\\Delete.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\Estacionamento\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Estacionamento\\Delete.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\Estacionamento\\Delete.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T11:56:35.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\appsettings.Development.json",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-27T12:17:56.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T12:46:13.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T11:56:56.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Estacionamento\\Index.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\Estacionamento\\Index.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Estacionamento\\Index.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\Estacionamento\\Index.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAYwD0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T11:58:06.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EstacionamentoController.cs",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Controllers\\EstacionamentoController.cs",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Controllers\\EstacionamentoController.cs",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Controllers\\EstacionamentoController.cs",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Controllers\\EstacionamentoController.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAApwJkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T11:52:57.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Estacionamento\\Details.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\Estacionamento\\Details.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Estacionamento\\Details.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\Estacionamento\\Details.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T11:57:36.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Estacionamento.cs",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Models\\Estacionamento.cs",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Models\\Estacionamento.cs",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Models\\Estacionamento.cs",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Models\\Estacionamento.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCAAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T11:51:42.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Estacionamento\\Create.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\Estacionamento\\Create.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Estacionamento\\Create.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\Estacionamento\\Create.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T11:56:04.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SistemaEstacionamentoContext.cs",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Data\\SistemaEstacionamentoContext.cs",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Data\\SistemaEstacionamentoContext.cs",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Data\\SistemaEstacionamentoContext.cs",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Data\\SistemaEstacionamentoContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T12:04:54.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20260127143524_Atualizacao1.cs",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Migrations\\20260127143524_Atualizacao1.cs",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Migrations\\20260127143524_Atualizacao1.cs",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Migrations\\20260127143524_Atualizacao1.cs",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Migrations\\20260127143524_Atualizacao1.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T14:35:49.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RazorPage.cs",
+              "DocumentMoniker": "C:\\Users\\igor\\AppData\\Local\\Temp\\MetadataAsSource\\7c170d57066f4b8c8660a35ee023c26d\\DecompilationMetadataAsSourceFileProvider\\29cdb12097a9498cb6fb4d509d0d39bb\\RazorPage.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\MetadataAsSource\\7c170d57066f4b8c8660a35ee023c26d\\DecompilationMetadataAsSourceFileProvider\\29cdb12097a9498cb6fb4d509d0d39bb\\RazorPage.cs",
+              "ToolTip": "C:\\Users\\igor\\AppData\\Local\\Temp\\MetadataAsSource\\7c170d57066f4b8c8660a35ee023c26d\\DecompilationMetadataAsSourceFileProvider\\29cdb12097a9498cb6fb4d509d0d39bb\\RazorPage.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\MetadataAsSource\\7c170d57066f4b8c8660a35ee023c26d\\DecompilationMetadataAsSourceFileProvider\\29cdb12097a9498cb6fb4d509d0d39bb\\RazorPage.cs [Read Only]",
+              "ViewState": "AgIAABMAAAAAAAAAAAAnwCEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T14:20:40.432Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Estacionamento\\Edit.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\Estacionamento\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Estacionamento\\Edit.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\Estacionamento\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T11:57:44.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T12:19:14.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T12:34:43.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SistemaEstacionamentoContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Migrations\\SistemaEstacionamentoContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Migrations\\SistemaEstacionamentoContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Migrations\\SistemaEstacionamentoContextModelSnapshot.cs",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Migrations\\SistemaEstacionamentoContextModelSnapshot.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T12:16:51.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20260127120552_InitialMigrate.cs",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Migrations\\20260127120552_InitialMigrate.cs",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Migrations\\20260127120552_InitialMigrate.cs",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Migrations\\20260127120552_InitialMigrate.cs",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Migrations\\20260127120552_InitialMigrate.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T12:06:32.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T12:46:52.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\appsettings.json",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\appsettings.json",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\appsettings.json",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-27T12:08:47.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SistemaEstacionamento.Main.csproj",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\SistemaEstacionamento.Main.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-27T11:54:13.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Program.cs",
+              "RelativeDocumentMoniker": "SistemaEstacionamento.Main\\Program.cs",
+              "ToolTip": "C:\\Users\\igor\\Documents\\Projetos Igor\\SistemaEstacionamento\\SistemaEstacionamento.Main\\Program.cs",
+              "RelativeToolTip": "SistemaEstacionamento.Main\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T11:55:49.154Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
