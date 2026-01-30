@@ -13,15 +13,14 @@ namespace SistemaEstacionamento.Main.Models
 
         [Required(ErrorMessage = "Este campo {0} é obrigatório")]
         [DataType(DataType.Currency)]
-        [Column(TypeName = "decimal(18, 2)")]        
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal PrecoInicial { get; set; }
 
         [Required(ErrorMessage = "Este campo {0} é obrigatório")]
         [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]       
         public decimal PrecoHora { get; set; }
-
-        [DisplayName("Quantidade de Horas")]
+        
         public int? QuantidadeHoras { get; set; }
 
         [Required(ErrorMessage = "Este campo {0} é obrigatório")]

@@ -337,3 +337,4 @@ C:\Users\igor\Documents\Projetos Igor\SistemaEstacionamento\SistemaEstacionament
 C:\Users\igor\Documents\Projetos Igor\SistemaEstacionamento\SistemaEstacionamento.Main\obj\Debug\net10.0\SistemaEstacionamento.Main.genruntimeconfig.cache
 C:\Users\igor\Documents\Projetos Igor\SistemaEstacionamento\SistemaEstacionamento.Main\obj\Debug\net10.0\ref\SistemaEstacionamento.Main.dll
 C:\Users\igor\Documents\Projetos Igor\SistemaEstacionamento\SistemaEstacionamento.Main\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\igor\Documents\Projetos Igor\SistemaEstacionamento\SistemaEstacionamento.Main\obj\Debug\net10.0\SistemaEstacionamento.Main.sourcelink.json
