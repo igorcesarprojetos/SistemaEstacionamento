@@ -1,63 +1,106 @@
 ﻿@model SistemaEstacionamento.Main.Models.Estacionamento
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
     //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
 <h4>Estacionamento</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-12">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="PrecoInicial" class="control-label"></label>
-                <input asp-for="PrecoInicial" class="form-control" />
-                <span asp-validation-for="PrecoInicial" class="text-danger"></span>
+            <div class="row mb-3">
+                <div class="form-group col-md-3 col-sm-6 mb-3 mb-md-0">
+                    <label asp-for="PrecoInicial" class="control-label"></label>
+                    <input asp-for="PrecoInicial" class="form-control" asp-format="{0:C2}" required />
+                    @* <span asp-validation-for="PrecoInicial" class="text-danger"></span> *@
+                </div>
+                <div class="form-group col-md-3 col-sm-6 mb-3 mb-md-0">
+                    <label asp-for="PrecoHora" class="control-label"></label>
+                    <input asp-for="PrecoHora" class="form-control" asp-format="{0:C2}" required />
+                    @* <span asp-validation-for="PrecoHora" class="text-danger"></span> *@
+                </div>
+                <div class="form-group col-md-3 col-sm-6 mb-3 mb-md-0">
+                    <label asp-for="QuantidadeHoras" class="control-label"></label>
+                    <input asp-for="QuantidadeHoras" class="form-control" />
+                    <span asp-validation-for="QuantidadeHoras" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3 col-sm-6">
+                    <label asp-for="ValorTotal" class="control-label"></label>
+                    <input asp-for="ValorTotal" class="form-control" readonly disabled="disabled" />
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="PrecoHora" class="control-label"></label>
-                <input asp-for="PrecoHora" class="form-control" />
-                <span asp-validation-for="PrecoHora" class="text-danger"></span>
+
+            <div class="row mb-3">
+                <div class="form-group col-md-4 col-sm-6 mb-3 mb-md-0">
+                    <label asp-for="PlacaVeiculo" class="control-label"></label>
+                    <input asp-for="PlacaVeiculo" class="form-control" />
+                    <span asp-validation-for="PlacaVeiculo" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4 col-sm-6 mb-3 mb-md-0">
+                    <label asp-for="ModeloVeiculo" class="control-label"></label>
+                    <input asp-for="ModeloVeiculo" class="form-control" />
+                    <span asp-validation-for="ModeloVeiculo" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4 col-sm-6 d-flex align-items-end">
+                    <div class="form-check mt-3">
+                        <input asp-for="Pago" type="checkbox" class="form-check-input" />
+                        <label asp-for="Pago" class="form-check-label"></label>
+                    </div>                    
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="QuantidadeHoras" class="control-label"></label>
-                <input asp-for="QuantidadeHoras" class="form-control" />
-                <span asp-validation-for="QuantidadeHoras" class="text-danger"></span>
+
+            <div class="row mb-3">
+                <div class="form-group col-md-4 col-sm-6 mb-2 mb-md-0">
+                    <input type="submit" value="Save" class="btn btn-primary w-100" />
+                </div>
+                <div class="form-group col-md-4 col-sm-6">
+                    <button asp-action="Index" class="btn btn-secondary w-100">Voltar</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="ValorTotal" class="control-label"></label>
-                <input asp-for="ValorTotal" class="form-control" readonly disabled="disabled" />
-            </div>
-            <div class="form-group">
-                <label asp-for="PlacaVeiculo" class="control-label"></label>
-                <input asp-for="PlacaVeiculo" class="form-control" />
-                <span asp-validation-for="PlacaVeiculo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ModeloVeiculo" class="control-label"></label>
-                <input asp-for="ModeloVeiculo" class="form-control" />
-                <span asp-validation-for="ModeloVeiculo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Pago" class="control-label"></label>
-                <input asp-for="Pago" class="form-control" />                
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
+
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @*  @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} *@
+
+
+    <script>
+
+        $(document).ready(function(){
+            $('#PrecoInicial').mask('000.000.000.000.000,00', {
+                reverse: true,
+                // callback para garantir que o R$ apareça sempre
+                onChange: function(value, e) {
+                    if(value !== ""){
+                        $(e.target).val("R$ " + value);
+                    } else {
+                        $(e.target).val("R$ 0,00"); // valor default
+                    }
+                }
+            });
+        });
+
+         $(document).ready(function(){
+            $('#PrecoHora').mask('000.000.000.000.000,00', {
+                reverse: true,
+                // callback para garantir que o R$ apareça sempre
+                onChange: function(value, e) {
+                    if(value !== ""){
+                        $(e.target).val("R$ " + value);
+                    } else {
+                        $(e.target).val("R$ 0,00"); // valor default
+                    }
+                }
+            });
+        });
+
+    </script>
 }

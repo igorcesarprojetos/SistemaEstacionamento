@@ -25,7 +25,7 @@ namespace SistemaEstacionamento.Main.Models
 
         [Required(ErrorMessage = "Este campo {0} é obrigatório")]
         [DataType(DataType.Currency)]
-        [Column(TypeName = "decimal(18, 2)")]        
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal ValorTotal { get; set; }
 
         [Required(ErrorMessage = "Este campo {0} é obrigatório")]

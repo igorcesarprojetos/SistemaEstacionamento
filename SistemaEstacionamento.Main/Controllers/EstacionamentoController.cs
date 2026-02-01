@@ -58,11 +58,11 @@ namespace SistemaEstacionamento.Main.Controllers
         {
             if (ModelState.IsValid)
             {
-                if(estacionamento.QuantidadeHoras.HasValue && estacionamento.QuantidadeHoras > 1)   
-                    estacionamento.ValorTotal = estacionamento.PrecoInicial + estacionamento.PrecoHora * estacionamento.QuantidadeHoras.Value;                
-                else                
+                if (estacionamento.QuantidadeHoras.HasValue && estacionamento.QuantidadeHoras > 1)
+                    estacionamento.ValorTotal = estacionamento.PrecoInicial + estacionamento.PrecoHora * estacionamento.QuantidadeHoras.Value;
+                else
                     estacionamento.ValorTotal = estacionamento.PrecoInicial;
-                
+
                 _context.Add(estacionamento);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

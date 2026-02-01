@@ -1,10 +1,10 @@
 ﻿@model SistemaEstacionamento.Main.Models.Estacionamento
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Criar";
 }
 
-<h1>Create</h1>
+<h1>Criar</h1>
 
 <h4>Estacionamento</h4>
 <hr />
@@ -16,24 +16,22 @@
 
             <!-- Primeira linha responsiva -->
             <div class="row mb-3">
-                <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
+                <div class="form-group col-md-3 col-sm-6 mb-3 mb-md-0">
                     <label asp-for="PrecoInicial" class="form-label">Preco Inicial</label>
-                    <input asp-for="PrecoInicial" class="form-control" asp-format="{0:C2}" required/>
-                    @* <input asp-for="PrecoInicial" onchange="formatacaoMoeda('#PrecoInicial')" class="form-control" /> *@
-                    @* <span asp-validation-for="PrecoInicial" class="text-danger"></span>        *@           
+                    <input asp-for="PrecoInicial" class="form-control" asp-format="{0:C2}" required/>                  
+                   @*  <span asp-validation-for="PrecoInicial" class="text-danger"></span>     *@              
                 </div>
-                <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
+                <div class="form-group col-md-3 col-sm-6 mb-3 mb-md-0">
                     <label asp-for="PrecoHora" class="form-label">Preco da Hora</label>
-                    <input asp-for="PrecoHora" class="form-control" asp-format="{0:C2}" required />
-                    @* <input asp-for="PrecoHora" onchange="formatacaoMoeda('#PrecoHora')" class="form-control" /> *@
-                    @* <span asp-validation-for="PrecoHora" class="text-danger"></span> *@
+                    <input asp-for="PrecoHora" class="form-control" asp-format="{0:C2}" required />                    
+                   @*  <span asp-validation-for="PrecoHora" class="text-danger"></span> *@
                 </div>
-                <div class="col-md-3 col-sm-6 mb-3 mb-md-0">
+                <div class="form-group col-md-3 col-sm-6 mb-3 mb-md-0">
                     <label asp-for="QuantidadeHoras" class="form-label">Quantidade de Horas</label>
                     <input asp-for="QuantidadeHoras" class="form-control" />
                     <span asp-validation-for="QuantidadeHoras" class="text-danger"></span>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="form-group col-md-3 col-sm-6">
                     <label asp-for="ValorTotal" class="form-label">Valor Total</label>
                     <input asp-for="ValorTotal" class="form-control" readonly disabled="disabled" />
                 </div>
@@ -41,17 +39,17 @@
 
             <!-- Segunda linha responsiva -->
             <div class="row mb-3">
-                <div class="col-md-4 col-sm-6 mb-3 mb-md-0">
+                <div class="form-group col-md-4 col-sm-6 mb-3 mb-md-0">
                     <label asp-for="PlacaVeiculo" class="form-label">Placa do Veículo</label>
                     <input asp-for="PlacaVeiculo" class="form-control" />
                     <span asp-validation-for="PlacaVeiculo" class="text-danger"></span>
                 </div>
-                <div class="col-md-4 col-sm-6 mb-3 mb-md-0">
+                <div class="form-group col-md-4 col-sm-6 mb-3 mb-md-0">
                     <label asp-for="ModeloVeiculo" class="form-label">Modelo do Veículo</label>
                     <input asp-for="ModeloVeiculo" class="form-control" />
                     <span asp-validation-for="ModeloVeiculo" class="text-danger"></span>
                 </div>
-                <div class="col-md-4 col-sm-6 d-flex align-items-end">
+                <div class="form-group col-md-4 col-sm-6 d-flex align-items-end">
                     <div class="form-check mt-3">
                         <input asp-for="Pago" type="checkbox" class="form-check-input" />
                         <label asp-for="Pago" class="form-check-label"></label>
@@ -61,11 +59,11 @@
 
             <!-- Botões -->
             <div class="row mb-3">
-                <div class="col-md-4 col-sm-6 mb-2 mb-md-0">
-                    <button type="submit" class="btn btn-primary w-100">Salvar</button>
+                <div class="form-group col-md-4 col-sm-6 mb-2 mb-md-0">
+                    <input type="submit" value="Salvar" class="btn btn-primary w-100" />
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <a asp-action="Index" class="btn btn-secondary w-100">Voltar</a>                   
+                <div class="form-group col-md-4 col-sm-6">
+                    <button asp-action="Index" class="btn btn-secondary w-100">Voltar</button>
                 </div>
             </div>
         </form>
@@ -75,23 +73,9 @@
 @section Scripts {
  @*    @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    } *@
-
-    <script> 
-
-        // function formatacaoMoeda(valorId){         
-        //     $(valorId).mask('R$ 000.000.000.000.000,00', {
-        //         reverse: true,
-        //         // callback para garantir que o R$ apareça sempre
-        //         onChange: function(value, e) {
-        //             if(value !== ""){
-        //                 $(e.target).val("R$ " + value);
-        //             } else {
-        //                 $(e.target).val("R$ 0,00"); // valor default
-        //             }
-        //         }
-        //     });          
-        // }
+    }
+ *@
+    <script>
 
         $(document).ready(function(){
             $('#PrecoInicial').mask('000.000.000.000.000,00', {
@@ -123,4 +107,4 @@
          
     </script>
 
-}
+}          
