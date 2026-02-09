@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaEstacionamento.Main.Data;
 
@@ -10,9 +11,11 @@ using SistemaEstacionamento.Main.Data;
 namespace SistemaEstacionamento.Main.Migrations
 {
     [DbContext(typeof(SistemaEstacionamentoContext))]
-    partial class SistemaEstacionamentoContextModelSnapshot : ModelSnapshot
+    [Migration("20260208041129_Update08022026")]
+    partial class Update08022026
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaEstacionamento.Main.Data;
 
@@ -10,9 +11,11 @@ using SistemaEstacionamento.Main.Data;
 namespace SistemaEstacionamento.Main.Migrations
 {
     [DbContext(typeof(SistemaEstacionamentoContext))]
-    partial class SistemaEstacionamentoContextModelSnapshot : ModelSnapshot
+    [Migration("20260203144606_Add Usuario")]
+    partial class AddUsuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,7 +77,7 @@ namespace SistemaEstacionamento.Main.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<bool>("IndAtivo")
+                    b.Property<bool?>("IndAtivo")
                         .HasColumnType("bit");
 
                     b.Property<string>("Login")
@@ -89,8 +92,8 @@ namespace SistemaEstacionamento.Main.Migrations
 
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(8)
+                        .HasColumnType("nvarchar(8)");
 
                     b.HasKey("Id");
 
