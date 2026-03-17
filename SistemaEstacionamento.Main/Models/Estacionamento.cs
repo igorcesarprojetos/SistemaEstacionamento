@@ -17,14 +17,22 @@ namespace SistemaEstacionamento.Main.Models
         [DisplayName("Preço Inicial")]
         public decimal PrecoInicial { get; set; }
 
-        [Required(ErrorMessage = "Este campo {0} é obrigatório")]
         [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
-        [DisplayName("Preço da Hora")]
-        public decimal PrecoHora { get; set; }
+        [DisplayName("Preço Hora Adicional")]
+        public decimal? PrecoHoraAdicional { get; set; }
+
+        [Required(ErrorMessage = "Este campo {0} é obrigatório")]
+        [DataType(DataType.Text)]
+        [DisplayName("Data Entrada")]
+        public DateTime DataEntrada { get; set; }
+
+        [DataType(DataType.Text)]
+        [DisplayName("Data Saída")]
+        public DateTime? DataSaida { get; set; }
 
         [DisplayName("Quantidade de Horas")]
-        public int? QuantidadeHoras { get; set; }
+        public decimal? QuantidadeHoras { get; set; }
 
         [Required(ErrorMessage = "Este campo {0} é obrigatório")]
         [DataType(DataType.Currency)]
@@ -34,7 +42,7 @@ namespace SistemaEstacionamento.Main.Models
 
         [Required(ErrorMessage = "Este campo {0} é obrigatório")]
         [StringLength(7, ErrorMessage = "O campo precisa ter entre {2} e {1} caracteres.", MinimumLength = 7)]
-        [DisplayName("Preço do Veículo")]
+        [DisplayName("Placa do Veículo")]
         public string PlacaVeiculo { get; set; }
 
         [Required(ErrorMessage = "Este campo {0} é obrigatório")]

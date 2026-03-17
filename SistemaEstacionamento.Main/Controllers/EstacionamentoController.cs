@@ -12,7 +12,7 @@ namespace SistemaEstacionamento.Main.Controllers
 {
     public class EstacionamentoController : Controller
     {
-        private readonly SistemaEstacionamentoContext _context;
+        private readonly SistemaEstacionamentoContext _context;      
 
         public EstacionamentoController(SistemaEstacionamentoContext context)
         {
@@ -54,17 +54,15 @@ namespace SistemaEstacionamento.Main.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,PrecoInicial,PrecoHora,QuantidadeHoras,ValorTotal,PlacaVeiculo,ModeloVeiculo,Pago")] Estacionamento estacionamento)
+        public async Task<IActionResult> Create([Bind("Id,PrecoInicial,PrecoHora,QuantidadeHoras,ValorTotal,PlacaVeiculo,ModeloVeiculo,Pago,DataEntrada,DataSaida")] Estacionamento estacionamento)
         {
             if (ModelState.IsValid)
             {
-                if (estacionamento.QuantidadeHoras.HasValue && estacionamento.QuantidadeHoras > 1)
-                    estacionamento.ValorTotal = estacionamento.PrecoInicial + estacionamento.PrecoHora * estacionamento.QuantidadeHoras.Value;
-                else
-                    estacionamento.ValorTotal = estacionamento.PrecoInicial;
+                estacionamento.DataEntrada = DateTime.Now;                
+                estacionamento.ValorTotal = estacionamento.PrecoInicial;
 
                 _context.Add(estacionamento);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();                
                 return RedirectToAction(nameof(Index));
             }
             return View(estacionamento);
@@ -83,6 +81,7 @@ namespace SistemaEstacionamento.Main.Controllers
             {
                 return NotFound();
             }
+           
             return View(estacionamento);
         }
 
@@ -91,7 +90,7 @@ namespace SistemaEstacionamento.Main.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,PrecoInicial,PrecoHora,QuantidadeHoras,ValorTotal,PlacaVeiculo,ModeloVeiculo,Pago")] Estacionamento estacionamento)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,PrecoInicial,PrecoHora,QuantidadeHoras,ValorTotal,PlacaVeiculo,ModeloVeiculo,Pago,DataEntrada,DataSaida")] Estacionamento estacionamento)
         {
             if (id != estacionamento.Id)
             {
@@ -102,6 +101,19 @@ namespace SistemaEstacionamento.Main.Controllers
             {
                 try
                 {
+                    estacionamento.DataSaida = DateTime.Now;
+
+                   // Calcula a diferença entre saída e entrada
+                   TimeSpan diferenca = estacionamento.DataSaida.Value - estacionamento.DataEntrada;
+
+                    // Se quiser o total de horas (inclui frações decimais)
+                    estacionamento.QuantidadeHoras = decimal.Parse(diferenca.TotalHours.ToString());
+
+                    if (estacionamento.QuantidadeHoras.HasValue && estacionamento.QuantidadeHoras > 1 && estacionamento.PrecoHoraAdicional.HasValue)
+                        estacionamento.ValorTotal = estacionamento.PrecoInicial + estacionamento.PrecoHoraAdicional.Value * estacionamento.QuantidadeHoras.Value;
+                    else
+                        estacionamento.ValorTotal = estacionamento.PrecoInicial;
+
                     _context.Update(estacionamento);
                     await _context.SaveChangesAsync();
                 }
@@ -147,7 +159,7 @@ namespace SistemaEstacionamento.Main.Controllers
             var estacionamento = await _context.Estacionamento.FindAsync(id);
             if (estacionamento != null)
             {
-                if(estacionamento.Pago)
+                if (estacionamento.Pago)
                     _context.Estacionamento.Remove(estacionamento);
             }
 

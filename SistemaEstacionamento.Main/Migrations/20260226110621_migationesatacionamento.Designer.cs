@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaEstacionamento.Main.Data;
 
@@ -11,9 +12,11 @@ using SistemaEstacionamento.Main.Data;
 namespace SistemaEstacionamento.Main.Migrations
 {
     [DbContext(typeof(SistemaEstacionamentoContext))]
-    partial class SistemaEstacionamentoContextModelSnapshot : ModelSnapshot
+    [Migration("20260226110621_migationesatacionamento")]
+    partial class migationesatacionamento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,7 +53,7 @@ namespace SistemaEstacionamento.Main.Migrations
                         .HasMaxLength(7)
                         .HasColumnType("nvarchar(7)");
 
-                    b.Property<decimal?>("PrecoHoraAdicional")
+                    b.Property<decimal>("PrecoHoraAdicional")
                         .HasColumnType("decimal(18, 2)");
 
                     b.Property<decimal>("PrecoInicial")

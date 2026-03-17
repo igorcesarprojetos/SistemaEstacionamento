@@ -30,8 +30,8 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/igor/Documents/Projetos Igor/SistemaEstacionamento/SistemaEstacionamento.Main/Views/Autenticacao/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWNhY2FvXExvZ2luLmNzaHRtbA==
+[C:/Users/igor/Documents/Projetos Igor/SistemaEstacionamento/SistemaEstacionamento.Main/Views/Autenticacao/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWNhY2FvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/igor/Documents/Projetos Igor/SistemaEstacionamento/SistemaEstacionamento.Main/Views/Estacionamento/Create.cshtml]
@@ -60,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/igor/Documents/Projetos Igor/SistemaEstacionamento/SistemaEstacionamento.Main/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/igor/Documents/Projetos Igor/SistemaEstacionamento/SistemaEstacionamento.Main/Views/Shared/Components/Menu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/igor/Documents/Projetos Igor/SistemaEstacionamento/SistemaEstacionamento.Main/Views/Shared/Error.cshtml]

@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SistemaEstacionamento.Main.Data;
+using SistemaEstacionamento.Main.Utilitarios.Helper;
+using SistemaEstacionamento.Main.Utilitarios.Helper.Interfaces;
 using System.Globalization;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<SistemaEstacionamentoContext>(options =>
@@ -9,6 +12,16 @@ builder.Services.AddDbContext<SistemaEstacionamentoContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+builder.Services.AddScoped<ISessao, Sessao>();
+
+builder.Services.AddSession(o =>
+{
+    o.Cookie.HttpOnly = true;
+    o.Cookie.IsEssential = true;
+});
 
 var cultureInfo = new CultureInfo("pt-BR");
 cultureInfo.NumberFormat.CurrencySymbol = "R$";
@@ -41,11 +54,13 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseSession();
+
 app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Autenticacao}/{action=Login}/{id?}")
+    pattern: "{controller=Autenticacao}/{action=Index}/{id?}")
     .WithStaticAssets();
 
 
