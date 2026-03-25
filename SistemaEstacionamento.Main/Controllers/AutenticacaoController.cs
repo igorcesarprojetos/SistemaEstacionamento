@@ -47,7 +47,7 @@ namespace SistemaEstacionamento.Main.Controllers
                     if (usuario != null)
                     {
                         if (!usuario.IndAtivo)
-                            TempData["MensagemErro"] = $"Usuario Inativo";
+                            TempData["Erro"] = $"Usuario Inativo";
                         else
                         {
                             _sessao.CriarSessaoUsuario(usuario);
@@ -55,8 +55,8 @@ namespace SistemaEstacionamento.Main.Controllers
                         }                        
                     }                                    
                     else
-                    {
-                        TempData["MensagemErro"] = $"Login e/ou senha invalida.Por favor tente novamente!";
+                    {                       
+                        TempData["Erro"] = $"Login e/ou senha invalida.Por favor tente novamente!";
                     }
                 }
 

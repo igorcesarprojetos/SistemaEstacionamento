@@ -1,6 +1,14 @@
 ﻿@model SistemaEstacionamento.Main.Models.LoginModel
 @{
     ViewData["Title"] = "Pagina de Login";
+
+    if (TempData["Erro"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["Erro"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
 }
 
 

@@ -3,12 +3,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SistemaEstacionamento.Main.Data;
+using SistemaEstacionamento.Main.Models.Configuration;
 using SistemaEstacionamento.Main.Utilitarios.Helper;
 using SistemaEstacionamento.Main.Utilitarios.Helper.Interfaces;
+using SistemaEstacionamento.Main.Utilitarios.Services;
+using SistemaEstacionamento.Main.Utilitarios.Services.Interface;
 using System.Globalization;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<SistemaEstacionamentoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SistemaEstacionamentoContext") ?? throw new InvalidOperationException("Connection string 'SistemaEstacionamentoContext' not found.")));
+
+builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("EmailConfiguration"));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -16,6 +21,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 builder.Services.AddScoped<ISessao, Sessao>();
+builder.Services.AddSingleton<IEmailSenders, EmailSender>();
 
 builder.Services.AddSession(o =>
 {

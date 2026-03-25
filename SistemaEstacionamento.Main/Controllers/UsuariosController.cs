@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using SistemaEstacionamento.Main.Data;
 using SistemaEstacionamento.Main.Models;
 using SistemaEstacionamento.Main.Utilitarios.Helper;
+using SistemaEstacionamento.Main.Utilitarios.Services.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +17,12 @@ namespace SistemaEstacionamento.Main.Controllers
     public class UsuariosController : Controller
     {
         private readonly SistemaEstacionamentoContext _context;
+        private readonly IEmailSenders _emailSenders;
 
-        public UsuariosController(SistemaEstacionamentoContext context)
+        public UsuariosController(SistemaEstacionamentoContext context, IEmailSenders emailSenders)
         {
             _context = context;
+            _emailSenders = emailSenders;
         }
 
         // GET: Usuarios
@@ -48,6 +52,8 @@ namespace SistemaEstacionamento.Main.Controllers
         // GET: Usuarios/Create
         public IActionResult Create()
         {
+            TempData["Sucesso"] = null;
+            TempData["Erro"] = null;
             return View();
         }
 
@@ -58,15 +64,42 @@ namespace SistemaEstacionamento.Main.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Login,Senha,Email,IndAtivo")] Usuario usuario)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var password = HelperSHA256.Encrypt(usuario.Senha);
-                usuario.Senha = password;
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    var senhaDescrypt = usuario.Senha;
+
+                    var password = HelperSHA256.Encrypt(usuario.Senha);
+                    usuario.Senha = password;
+
+                    _context.Add(usuario);          
+                    await _context.SaveChangesAsync();
+
+                    TempData["Sucesso"] = $"Usuario salvo com sucesso!";
+
+                    var emailEnviado = await _emailSenders
+                        .SendEmailAsync(
+                           usuario.Email,
+                          "Sistema Estacionamento: Criação de Usuario e senha",
+                          "Este é seu acesso:",
+                          $"<span style='font-size:16px'><b>usuário:</b>{usuario.Login}</span></br> <span style='font-size:16px'><b>senha:</b>{senhaDescrypt}</span></br>"
+                        );
+
+                    if (emailEnviado)                                            
+                        TempData["Sucesso"] = $"E-mail de usuario e senha enviado com sucesso para o email: {usuario.Email}!";
+                    
+
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(usuario);
             }
-            return View(usuario);
+            catch (Exception ex)
+            {
+                TempData["Erro"] = $"{ex.Message}";
+                throw new Exception((string?)TempData["Erro"]);
+            }
+
         }
 
         // GET: Usuarios/Edit/5
@@ -109,8 +142,8 @@ namespace SistemaEstacionamento.Main.Controllers
 
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
-                    
-                    
+
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {

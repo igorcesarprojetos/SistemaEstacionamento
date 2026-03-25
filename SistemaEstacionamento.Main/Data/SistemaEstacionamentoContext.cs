@@ -14,7 +14,7 @@ namespace SistemaEstacionamento.Main.Data
         {
         }
 
-        public DbSet<SistemaEstacionamento.Main.Models.Estacionamento> Estacionamento { get; set; } = default!;
-        public DbSet<SistemaEstacionamento.Main.Models.Usuario> Usuario { get; set; } = default!;
+        public DbSet<Estacionamento> Estacionamento { get; set; } = default!;
+        public DbSet<Usuario> Usuario { get; set; } = default!;
     }
 }
