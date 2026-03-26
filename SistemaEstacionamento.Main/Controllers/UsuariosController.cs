@@ -53,6 +53,7 @@ namespace SistemaEstacionamento.Main.Controllers
         public IActionResult Create()
         {
             TempData["Sucesso"] = null;
+            TempData["EmailEnviado"] = null;
             TempData["Erro"] = null;
             return View();
         }
@@ -73,10 +74,9 @@ namespace SistemaEstacionamento.Main.Controllers
                     var password = HelperSHA256.Encrypt(usuario.Senha);
                     usuario.Senha = password;
 
-                    _context.Add(usuario);          
-                    await _context.SaveChangesAsync();
-
-                    TempData["Sucesso"] = $"Usuario salvo com sucesso!";
+                    _context.Add(usuario);
+                    if (await _context.SaveChangesAsync() > 0)
+                        TempData["Sucesso"] = $"Usuario salvo com sucesso!";                   
 
                     var emailEnviado = await _emailSenders
                         .SendEmailAsync(
@@ -86,10 +86,9 @@ namespace SistemaEstacionamento.Main.Controllers
                           $"<span style='font-size:16px'><b>usuário:</b>{usuario.Login}</span></br> <span style='font-size:16px'><b>senha:</b>{senhaDescrypt}</span></br>"
                         );
 
-                    if (emailEnviado)                                            
-                        TempData["Sucesso"] = $"E-mail de usuario e senha enviado com sucesso para o email: {usuario.Email}!";
-                    
-
+                    if (emailEnviado)
+                        TempData["EmailEnviado"] = $"E-mail de usuario e senha enviado com sucesso para o email: {usuario.Email}!";
+                        
                     return RedirectToAction(nameof(Index));
                 }
                 return View(usuario);
