@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Build.Framework;
 using Microsoft.EntityFrameworkCore;
 using SistemaEstacionamento.Main.Data;
 using SistemaEstacionamento.Main.Models;
@@ -14,10 +16,16 @@ namespace SistemaEstacionamento.Main.Controllers
     public class EstacionamentoController : Controller
     {
         private readonly SistemaEstacionamentoContext _context;
-        private readonly ISessao _sessao;
+        private readonly ISessao _sessao;      
 
         public EstacionamentoController(SistemaEstacionamentoContext context, ISessao sessao)
         {
+            if (TempData != null)
+            {
+                TempData["Sucesso"] = null;
+                TempData["Erro"] = null;
+            }
+
             _context = context;
             _sessao = sessao;
         }

@@ -23,6 +23,13 @@ namespace SistemaEstacionamento.Main.Controllers
 
         public UsuariosController(SistemaEstacionamentoContext context, IEmailSenders emailSenders, ISessao sessao)
         {
+            if (TempData != null)
+            {
+                TempData["Sucesso"] = null;
+                TempData["EmailEnviado"] = null;
+                TempData["Erro"] = null;
+            }
+
             _context = context;
             _emailSenders = emailSenders;
             _sessao = sessao;
@@ -57,10 +64,7 @@ namespace SistemaEstacionamento.Main.Controllers
 
         // GET: Usuarios/Create
         public IActionResult Create()
-        {
-            TempData["Sucesso"] = null;
-            TempData["EmailEnviado"] = null;
-            TempData["Erro"] = null;
+        {           
             return View();
         }
 
