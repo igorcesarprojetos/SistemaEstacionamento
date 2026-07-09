@@ -1,28 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SistemaEstacionamento.Main.Data;
 using SistemaEstacionamento.Main.Models;
+using SistemaEstacionamento.Main.Utilitarios.Helper.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SistemaEstacionamento.Main.Controllers
 {
     public class EstacionamentoController : Controller
     {
-        private readonly SistemaEstacionamentoContext _context;      
+        private readonly SistemaEstacionamentoContext _context;
+        private readonly ISessao _sessao;
 
-        public EstacionamentoController(SistemaEstacionamentoContext context)
+        public EstacionamentoController(SistemaEstacionamentoContext context, ISessao sessao)
         {
             _context = context;
+            _sessao = sessao;
         }
 
         // GET: Estacionamento
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Estacionamento.ToListAsync());
+            if (_sessao.BuscarSessaoUsuario() != null)
+                return View(await _context.Estacionamento.ToListAsync());
+            else
+                return RedirectToAction(nameof(Index), "Autenticacao");
         }
 
         // GET: Estacionamento/Details/5
@@ -46,6 +52,8 @@ namespace SistemaEstacionamento.Main.Controllers
         // GET: Estacionamento/Create
         public IActionResult Create()
         {
+            TempData["Sucesso"] = null;            
+            TempData["Erro"] = null;
             return View();
         }
 
@@ -56,16 +64,27 @@ namespace SistemaEstacionamento.Main.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,PrecoInicial,PrecoHora,QuantidadeHoras,ValorTotal,PlacaVeiculo,ModeloVeiculo,Pago,DataEntrada,DataSaida")] Estacionamento estacionamento)
         {
-            if (ModelState.IsValid)
+            try
             {
-                estacionamento.DataEntrada = DateTime.Now;                
-                estacionamento.ValorTotal = estacionamento.PrecoInicial;
+                if (ModelState.IsValid)
+                {
+                    estacionamento.DataEntrada = DateTime.Now;
+                    estacionamento.ValorTotal = estacionamento.PrecoInicial;
 
-                _context.Add(estacionamento);
-                await _context.SaveChangesAsync();                
-                return RedirectToAction(nameof(Index));
+                    _context.Add(estacionamento);
+                    await _context.SaveChangesAsync();                     
+                    TempData["Sucesso"] = "Registro salvo com sucesso!";
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(estacionamento);
+
             }
-            return View(estacionamento);
+            catch (Exception ex)
+            {
+                TempData["Erro"] = ex.Message;
+                throw new Exception(TempData["Erro"]?.ToString());
+            }
+           
         }
 
         // GET: Estacionamento/Edit/5
@@ -92,19 +111,19 @@ namespace SistemaEstacionamento.Main.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,PrecoInicial,PrecoHora,QuantidadeHoras,ValorTotal,PlacaVeiculo,ModeloVeiculo,Pago,DataEntrada,DataSaida")] Estacionamento estacionamento)
         {
-            if (id != estacionamento.Id)
+            try
             {
-                return NotFound();
-            }
+                if (id != estacionamento.Id)
+                {
+                    return NotFound();
+                }
 
-            if (ModelState.IsValid)
-            {
-                try
+                if (ModelState.IsValid)
                 {
                     estacionamento.DataSaida = DateTime.Now;
 
-                   // Calcula a diferença entre saída e entrada
-                   TimeSpan diferenca = estacionamento.DataSaida.Value - estacionamento.DataEntrada;
+                    // Calcula a diferença entre saída e entrada
+                    TimeSpan diferenca = estacionamento.DataSaida.Value - estacionamento.DataEntrada;
 
                     // Se quiser o total de horas (inclui frações decimais)
                     estacionamento.QuantidadeHoras = decimal.Parse(diferenca.TotalHours.ToString());
@@ -115,22 +134,29 @@ namespace SistemaEstacionamento.Main.Controllers
                         estacionamento.ValorTotal = estacionamento.PrecoInicial;
 
                     _context.Update(estacionamento);
+                    TempData["Sucesso"] = "Registro editado com sucesso!";
                     await _context.SaveChangesAsync();
+
+                    return RedirectToAction(nameof(Index));
+
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!EstacionamentoExists(estacionamento.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+
+                return View(estacionamento);
             }
-            return View(estacionamento);
+            catch (DbUpdateConcurrencyException ex)
+            {
+                if (!EstacionamentoExists(estacionamento.Id))
+                {
+                    TempData["Erro"] = ex.Message;
+                    return NotFound();
+                }
+                else
+                {                    
+                    throw new Exception(TempData["Erro"]?.ToString());
+                }
+
+                throw;
+            }
         }
 
         // GET: Estacionamento/Delete/5
@@ -156,15 +182,25 @@ namespace SistemaEstacionamento.Main.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var estacionamento = await _context.Estacionamento.FindAsync(id);
-            if (estacionamento != null)
+            try
             {
-                if (estacionamento.Pago)
-                    _context.Estacionamento.Remove(estacionamento);
-            }
+                var estacionamento = await _context.Estacionamento.FindAsync(id);
+                if (estacionamento != null)
+                {
+                    //if (estacionamento.Pago)
+                    _context.Estacionamento.Remove(estacionamento);                    
+                }               
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                TempData["Sucesso"] = "Registro excluido com sucesso!";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["Erro"] = $"Erro ao excluir o registro! Motivo: {ex.InnerException!.Message}";
+                throw;
+            }
+            
         }
 
         private bool EstacionamentoExists(int id)

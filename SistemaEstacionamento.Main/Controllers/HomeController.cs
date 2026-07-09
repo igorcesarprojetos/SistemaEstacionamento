@@ -1,14 +1,26 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SistemaEstacionamento.Main.Models;
+using SistemaEstacionamento.Main.Utilitarios.Helper.Interfaces;
 
 namespace SistemaEstacionamento.Main.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ISessao _sessao;
+
+        public HomeController(ISessao sessao)
+        {
+            _sessao = sessao;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            if (_sessao.BuscarSessaoUsuario() != null)
+                return View();
+            else
+                return RedirectToAction(nameof(Index), "Autenticacao");
+            
         }
 
         public IActionResult Privacy()

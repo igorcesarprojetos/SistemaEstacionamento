@@ -29,7 +29,8 @@ namespace SistemaEstacionamento.Main.Controllers
         
         public async Task<IActionResult> Index()
         {
-            if(_sessao.BuscarSessaoUsuario()!=null) return RedirectToAction(nameof(Index), "Home");
+            if(_sessao.BuscarSessaoUsuario()!=null) 
+                return RedirectToAction(nameof(Index), "Home");
 
             return View();
         }

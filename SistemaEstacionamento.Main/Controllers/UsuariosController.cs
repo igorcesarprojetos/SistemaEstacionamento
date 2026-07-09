@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pag
 using SistemaEstacionamento.Main.Data;
 using SistemaEstacionamento.Main.Models;
 using SistemaEstacionamento.Main.Utilitarios.Helper;
+using SistemaEstacionamento.Main.Utilitarios.Helper.Interfaces;
 using SistemaEstacionamento.Main.Utilitarios.Services.Interface;
 using System;
 using System.Collections.Generic;
@@ -18,17 +19,22 @@ namespace SistemaEstacionamento.Main.Controllers
     {
         private readonly SistemaEstacionamentoContext _context;
         private readonly IEmailSenders _emailSenders;
+        private readonly ISessao _sessao;
 
-        public UsuariosController(SistemaEstacionamentoContext context, IEmailSenders emailSenders)
+        public UsuariosController(SistemaEstacionamentoContext context, IEmailSenders emailSenders, ISessao sessao)
         {
             _context = context;
             _emailSenders = emailSenders;
+            _sessao = sessao;
         }
 
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Usuario.ToListAsync());
+            if (_sessao.BuscarSessaoUsuario() != null)
+                return View(await _context.Usuario.ToListAsync());
+            else
+                return RedirectToAction(nameof(Index), "Autenticacao");
         }
 
         // GET: Usuarios/Details/5
@@ -76,7 +82,7 @@ namespace SistemaEstacionamento.Main.Controllers
 
                     _context.Add(usuario);
                     if (await _context.SaveChangesAsync() > 0)
-                        TempData["Sucesso"] = $"Usuario salvo com sucesso!";                   
+                        TempData["Sucesso"] = "Usuario salvo com sucesso!";                   
 
                     var emailEnviado = await _emailSenders
                         .SendEmailAsync(
@@ -88,15 +94,30 @@ namespace SistemaEstacionamento.Main.Controllers
 
                     if (emailEnviado)
                         TempData["EmailEnviado"] = $"E-mail de usuario e senha enviado com sucesso para o email: {usuario.Email}!";
-                        
+
+
+                    if (usuario != null && usuario.Id > 0)
+                    {
+                        if (!usuario.IndAtivo)
+                            TempData["Erro"] = $"Usuario Inativo";
+                        else
+                        {
+                            if (_sessao.BuscarSessaoUsuario() == null)
+                            {
+                                _sessao.CriarSessaoUsuario(usuario);
+                                return RedirectToAction(nameof(Index), "Home");
+                            }                             
+                        }
+                    }
+
                     return RedirectToAction(nameof(Index));
                 }
                 return View(usuario);
             }
             catch (Exception ex)
             {
-                TempData["Erro"] = $"{ex.Message}";
-                throw new Exception((string?)TempData["Erro"]);
+                TempData["Erro"] = ex.Message;
+                throw new Exception(TempData["Erro"]?.ToString());
             }
 
         }
@@ -124,14 +145,14 @@ namespace SistemaEstacionamento.Main.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Login,Senha,Email,IndAtivo")] Usuario usuario)
         {
-            if (id != usuario.Id)
+            try
             {
-                return NotFound();
-            }
+                if (id != usuario.Id)
+                {
+                    return NotFound();
+                }
 
-            if (ModelState.IsValid)
-            {
-                try
+                if (ModelState.IsValid)
                 {
                     if (usuario.Senha != HelperSHA256.Encrypt(usuario.Senha))
                     {
@@ -140,24 +161,28 @@ namespace SistemaEstacionamento.Main.Controllers
                     }
 
                     _context.Update(usuario);
-                    await _context.SaveChangesAsync();
 
+                    if (await _context.SaveChangesAsync() > 0)
+                        TempData["Sucesso"] = "Usuario editado com sucesso!";
 
+                    return RedirectToAction(nameof(Index));                    
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UsuarioExists(usuario.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                return View(usuario);
+
             }
-            return View(usuario);
+            catch (DbUpdateConcurrencyException ex)
+            {
+                TempData["Erro"] = ex.Message;
+                if (!UsuarioExists(usuario.Id))
+                {                    
+                    return NotFound();
+                }
+                else
+                {
+                    throw new Exception(TempData["Erro"]?.ToString());                    
+                }                
+            }
+            
         }
 
         // GET: Usuarios/Delete/5
@@ -183,14 +208,26 @@ namespace SistemaEstacionamento.Main.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var usuario = await _context.Usuario.FindAsync(id);
-            if (usuario != null)
+            try
             {
-                _context.Usuario.Remove(usuario);
-            }
+                var usuario = await _context.Usuario.FindAsync(id);
+                if (usuario != null)
+                {
+                    _context.Usuario.Remove(usuario);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                if(await _context.SaveChangesAsync()>0)
+                    TempData["Sucesso"] = "Usuario deletado com sucesso!";
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["Erro"] = ex.Message;
+
+                throw new Exception(TempData["Erro"]?.ToString());
+            }
+            
         }
 
         private bool UsuarioExists(int id)
