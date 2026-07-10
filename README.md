@@ -7,7 +7,8 @@ OBS: Caso queira Rodar a IDE Visual Code também é compatível.
 
 Gerenciador que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Microsoft Sql Server Management Studio 21(ou a versão mais recente, fique a vontade)
 
-1- No terminal aponte para seu diretório de preferencia e execute o seguinte comando:
+1- No terminal aponte para seu diretório de preferência e execute o seguinte comando:
+     
      git clone https://github.com/igorcesarprojetos/SistemaEstacionamento.git
 
 2- Configuração do Banco de dados no arquivo appsettings.Development.json , por gentileza preencher de acordo com suas informações.
