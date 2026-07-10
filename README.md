@@ -1,6 +1,6 @@
 Sistema de Estacionamento
 
-Tecnologia : Asp NET CORE MVC 10
+Tecnologia : Asp NET CORE MVC 10 com C#
 
 IDE que Utilizo pra Desenvolver: Visual Studio 2026 Community
 
