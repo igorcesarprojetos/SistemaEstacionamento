@@ -7,7 +7,10 @@ OBS: Caso queira Rodar a IDE Visual Code também é compatível.
 
 Gerenciador que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Microsoft Sql Server Management Studio 21(ou a versão mais recente, fique a vontade)
 
-1- Configuração do Banco de dados no arquivo appsettings.Development.json , por gentileza preencher de acordo com suas informações.
+1- No terminal aponte para seu diretório de preferencia e execute o seguinte comando:
+     git clone https://github.com/igorcesarprojetos/SistemaEstacionamento.git
+
+2- Configuração do Banco de dados no arquivo appsettings.Development.json , por gentileza preencher de acordo com suas informações.
 
     "ConnectionStrings": {
       "SistemaEstacionamentoContext": "Data Source=NomeInstânciaDB;Initial Catalog=SistemaEstacionamento;User ID=UsuarioBanco;Password=SenhaBanco;Encrypt=False"
@@ -25,7 +28,7 @@ Gerenciador que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Mic
 
   
 
-2-Por gentileza , pegar o backup ou script do banco de dados que está no projeto SistemaEstacionamento.Main em:
+3-Por gentileza , pegar o backup ou script do banco de dados que está no projeto SistemaEstacionamento.Main em:
 
      a)..\SistemaEstacionamento.Main\Data\BackupDatabase\SistemaEstacionamento.bak
      
@@ -36,9 +39,9 @@ Gerenciador que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Mic
      c)e restaurar o backup ou rodar o script no seu gerenciador do banco de dados
 
 
-3- Em seguida rodar a solução na sua IDE Visual Studio 2026,2022 ou superior pressionando o botão F5 do teclado.
+4- Em seguida rodar a solução na sua IDE Visual Studio 2026,2022 ou superior pressionando o botão F5 do teclado.
 
-4- Ou Pode rodar também na IDE Visual Studio Code com os seguintes comandos na seguinte ordem no terminal:
+5- Ou Pode rodar também na IDE Visual Studio Code com os seguintes comandos na seguinte ordem no terminal:
 
     a-dotnet build
     
