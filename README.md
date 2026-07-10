@@ -24,9 +24,11 @@ IDE que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Microsoft S
 
   
 
-  2-Por gentileza , pegar o backup ou script do banco de dados que esá no projeto SistemaEstacionamento.Main em:
+  2-Por gentileza , pegar o backup ou script do banco de dados que está no projeto SistemaEstacionamento.Main em:
    a)..\SistemaEstacionamento.Main\Data\BackupDatabase\SistemaEstacionamento.bak
    
    ou
    
    b)..\SistemaEstacionamento\SistemaEstacionamento.Main\Data\ScriptDatabase\SistemaEstacionamento.sql
+
+   c)e restaurar o backup ou rodar o script no seu gerenciador do banco de dados
