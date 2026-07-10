@@ -3,6 +3,7 @@ Sistema de Estacionamento
 Tecnologia : Asp NET CORE MVC 10 com C#
 
 IDE que Utilizo pra Desenvolver e Rodar: Visual Studio 2026 ou Visual Studio 2022. (IDEs compativeis com AspNet Core 10)
+OBS: Caso queira Rodar a IDE Visual Code também é compatível.
 
 Gerenciador que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Microsoft Sql Server Management Studio 21(ou a versão mais recente, fique a vontade)
 
