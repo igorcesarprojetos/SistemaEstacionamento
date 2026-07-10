@@ -2,7 +2,7 @@ Sistema de Estacionamento
 
 Tecnologia : Asp NET CORE MVC 10 com C#
 
-IDE que Utilizo pra Desenvolver e Rodar: Visual Studio 2026 ou Visual Studio 2022. (IDEs compativeis com AspNet Core 10)
+IDE que Utilizo pra Desenvolver e Rodar: Visual Studio 2026 ou Visual Studio 2022 ou superior. (IDEs compativeis com AspNet Core 10)
 OBS: Caso queira Rodar a IDE Visual Code também é compatível.
 
 Gerenciador que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Microsoft Sql Server Management Studio 21(ou a versão mais recente, fique a vontade)
@@ -36,7 +36,7 @@ Gerenciador que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Mic
      c)e restaurar o backup ou rodar o script no seu gerenciador do banco de dados
 
 
-3- Em seguida rodar a solução no seu Visual Studio pressionando F5
+3- Em seguida rodar a solução na sua IDE Visual Studio 2026,2022 ou superior pressionando F5
 
 4- Ou Pode rodar também na IDE Visual Code com os seguintes comandos na seguinte ordem no terminal:
 
