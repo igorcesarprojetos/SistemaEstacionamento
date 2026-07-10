@@ -2,7 +2,7 @@ Sistema de Estacionamento
 
 Tecnologia : Asp NET CORE MVC 10 com C#
 
-IDE que Utilizo pra Desenvolver e Rodar: Visual Studio 2026 ou Visual Studio 2022.
+IDE que Utilizo pra Desenvolver e Rodar: Visual Studio 2026 ou Visual Studio 2022. (IDEs compativeis com AspNet Core 10)
 
 OBS: Pode rodar também na IDE Visual Code com os seguintes comandos na seguinte ordem no terminal:
     1-dotnet build
