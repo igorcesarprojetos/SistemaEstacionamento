@@ -36,7 +36,7 @@ Gerenciador que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Mic
      c)e restaurar o backup ou rodar o script no seu gerenciador do banco de dados
 
 
-3- Em seguida rodar a solução na sua IDE Visual Studio 2026,2022 ou superior pressionando F5
+3- Em seguida rodar a solução na sua IDE Visual Studio 2026,2022 ou superior pressionando o botão F5 do teclado.
 
 4- Ou Pode rodar também na IDE Visual Code com os seguintes comandos na seguinte ordem no terminal:
 
