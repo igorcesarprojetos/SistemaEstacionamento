@@ -8,27 +8,28 @@ IDE que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Microsoft S
 
 1- Configuração do Banco de dados no arquivo appsettings.Development.json , por gentileza preencher de acordo com suas informações.
 
-  "ConnectionStrings": {
-    "SistemaEstacionamentoContext": "Data Source=NomeInstânciaDB;Initial Catalog=SistemaEstacionamento;User ID=UsuarioBanco;Password=SenhaBanco;Encrypt=False"
-  },
+    "ConnectionStrings": {
+      "SistemaEstacionamentoContext": "Data Source=NomeInstânciaDB;Initial Catalog=SistemaEstacionamento;User ID=UsuarioBanco;Password=SenhaBanco;Encrypt=False"
+    },
+    
   
-
-  "EmailConfiguration": {
-    "NomeRemetente": "seu nome",
-    "EmailRemetente": "seu email",
-    "Senha": "senha do email",
-    "EnderecoServidorEmail": "o smtp do seu email",
-    "PortaServidorEmail": 587(se não for essa porta coloca outra correspondente a seu smtp),
-    "UsarSsl": true
-  }
+    "EmailConfiguration": {
+      "NomeRemetente": "seu nome",
+      "EmailRemetente": "seu email",
+      "Senha": "senha do email",
+      "EnderecoServidorEmail": "o smtp do seu email",
+      "PortaServidorEmail": 587(se não for essa porta coloca outra correspondente a seu smtp),
+      "UsarSsl": true
+    }
 
   
 
   2-Por gentileza , pegar o backup ou script do banco de dados que está no projeto SistemaEstacionamento.Main em:
-   a)..\SistemaEstacionamento.Main\Data\BackupDatabase\SistemaEstacionamento.bak
-   
-   ou
-   
-   b)..\SistemaEstacionamento\SistemaEstacionamento.Main\Data\ScriptDatabase\SistemaEstacionamento.sql
-
-   c)e restaurar o backup ou rodar o script no seu gerenciador do banco de dados
+  
+     a)..\SistemaEstacionamento.Main\Data\BackupDatabase\SistemaEstacionamento.bak
+     
+     ou
+     
+     b)..\SistemaEstacionamento\SistemaEstacionamento.Main\Data\ScriptDatabase\SistemaEstacionamento.sql
+  
+     c)e restaurar o backup ou rodar o script no seu gerenciador do banco de dados
