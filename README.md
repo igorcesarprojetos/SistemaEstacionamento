@@ -4,7 +4,7 @@ Tecnologia : Asp NET CORE MVC 10
 IDE que Utilizo pra Desenvolver: Visual Studio 2026 Community
 IDE que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Microsoft Sql Server Management Studio 21(ou mais recente)
 
-1- Configuração do Banco de dados no arquivo appsettings.Development , por gentileza preencher de acordo com suas informações.
+1- Configuração do Banco de dados no arquivo appsettings.Development.json , por gentileza preencher de acordo com suas informações.
 
   "ConnectionStrings": {
     "SistemaEstacionamentoContext": "Data Source=NomeInstânciaDB;Initial Catalog=SistemaEstacionamento;User ID=UsuarioBanco;Password=SenhaBanco;Encrypt=False"
