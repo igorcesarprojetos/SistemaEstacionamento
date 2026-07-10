@@ -39,5 +39,7 @@ Gerenciador que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Mic
 3- Em seguida rodar a solução no seu Visual Studio pressionando F5
 
 4- Ou Pode rodar também na IDE Visual Code com os seguintes comandos na seguinte ordem no terminal:
+
     a-dotnet build
+    
     b-dotnet run --project .\SistemaEstacionamento.Main\SistemaEstacionamento.Main.csproj
