@@ -1,0 +1,49 @@
+Sistema de Estacionamento
+
+Tecnologia : Asp NET CORE MVC 10 com C#
+
+IDE que Utilizo pra Desenvolver e Rodar: Visual Studio 2026 ou Visual Studio 2022 ou superior. (IDEs compativeis com AspNet Core 10)
+OBS: Caso queira Rodar a IDE Visual Code também é compatível.
+
+Gerenciador que Utilizo para o Banco de Dados: Microsoft Sql Server 2022 com Microsoft Sql Server Management Studio 21(ou a versão mais recente, fique a vontade)
+
+1- No terminal aponte para seu diretório de preferência e execute o seguinte comando:
+     
+     git clone https://github.com/igorcesarprojetos/SistemaEstacionamento.git
+
+2- Configuração do Banco de dados no arquivo appsettings.Development.json , por gentileza preencher de acordo com suas informações.
+
+    "ConnectionStrings": {
+      "SistemaEstacionamentoContext": "Data Source=NomeInstânciaDB;Initial Catalog=SistemaEstacionamento;User ID=UsuarioBanco;Password=SenhaBanco;Encrypt=False"
+    },
+    
+  
+    "EmailConfiguration": {
+      "NomeRemetente": "seu nome",
+      "EmailRemetente": "seu email",
+      "Senha": "senha do email",
+      "EnderecoServidorEmail": "o smtp do seu email",
+      "PortaServidorEmail": 587(se não for essa porta coloca outra correspondente a seu smtp),
+      "UsarSsl": true
+    }
+
+  
+
+3-Por gentileza , pegar o backup ou script do banco de dados que está no projeto SistemaEstacionamento.Main em:
+
+     a)..\SistemaEstacionamento.Main\Data\BackupDatabase\SistemaEstacionamento.bak
+     
+     ou
+     
+     b)..\SistemaEstacionamento\SistemaEstacionamento.Main\Data\ScriptDatabase\SistemaEstacionamento.sql
+    
+     c)e restaurar o backup ou rodar o script no seu gerenciador do banco de dados
+
+
+4- Em seguida rodar a solução na sua IDE Visual Studio 2026,2022 ou superior pressionando o botão F5 do teclado.
+
+5- Ou Pode rodar também na IDE Visual Studio Code com os seguintes comandos na seguinte ordem no terminal:
+
+    dotnet build
+    
+    dotnet run --project .\SistemaEstacionamento.Main\SistemaEstacionamento.Main.csproj
