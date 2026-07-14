@@ -11,6 +11,12 @@ namespace SistemaEstacionamento.Main.Controllers
 
         public HomeController(ISessao sessao)
         {
+            if (TempData != null)
+            {
+                TempData["Sucesso"] = null;
+                TempData["Erro"] = null;
+            }
+
             _sessao = sessao;
         }
 

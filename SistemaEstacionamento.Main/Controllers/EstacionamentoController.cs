@@ -117,10 +117,10 @@ namespace SistemaEstacionamento.Main.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,PrecoInicial,PrecoHora,QuantidadeHoras,ValorTotal,PlacaVeiculo,ModeloVeiculo,Pago,DataEntrada,DataSaida")] Estacionamento estacionamento)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,PrecoInicial,PrecoHora,PrecoHoraAdicional,QuantidadeHoras,ValorTotal,PlacaVeiculo,ModeloVeiculo,Pago,DataEntrada,DataSaida")] Estacionamento estacionamento)
         {
             try
-            {
+            {         
                 if (id != estacionamento.Id)
                 {
                     return NotFound();
@@ -131,13 +131,14 @@ namespace SistemaEstacionamento.Main.Controllers
                     estacionamento.DataSaida = DateTime.Now;
 
                     // Calcula a diferença entre saída e entrada
-                    TimeSpan diferenca = estacionamento.DataSaida.Value - estacionamento.DataEntrada;
+                    TimeSpan diferenca = estacionamento.DataSaida.Value - estacionamento.DataEntrada;                    
+               
+                    // Se quiser o total de horas (inclui frações decimais)                    
+                    //estacionamento.QuantidadeHoras = (decimal)diferenca.TotalHours;
+                    estacionamento.QuantidadeHoras = diferenca.Hours;                    
 
-                    // Se quiser o total de horas (inclui frações decimais)
-                    estacionamento.QuantidadeHoras = decimal.Parse(diferenca.TotalHours.ToString());
-
-                    if (estacionamento.QuantidadeHoras.HasValue && estacionamento.QuantidadeHoras > 1 && estacionamento.PrecoHoraAdicional.HasValue)
-                        estacionamento.ValorTotal = estacionamento.PrecoInicial + estacionamento.PrecoHoraAdicional.Value * estacionamento.QuantidadeHoras.Value;
+                    if (estacionamento.QuantidadeHoras.HasValue && (int)estacionamento.QuantidadeHoras > 1 && estacionamento.PrecoHoraAdicional.HasValue)
+                        estacionamento.ValorTotal = estacionamento.PrecoInicial + (estacionamento.PrecoHoraAdicional.Value * ((int)estacionamento.QuantidadeHoras.Value - 1) );
                     else
                         estacionamento.ValorTotal = estacionamento.PrecoInicial;
 
