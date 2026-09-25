@@ -1,5 +1,7 @@
 Sistema de Estacionamento
 
+Objetivo do sistema é para o gerenciamento de vagas de estacionamento.
+
 Tecnologia : Asp NET CORE MVC 10 com C#
 
 IDE que Utilizo pra Desenvolver e Rodar: Visual Studio 2026 ou Visual Studio 2022 ou superior. (IDEs compativeis com AspNet Core 10)
